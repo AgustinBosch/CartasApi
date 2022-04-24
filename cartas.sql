@@ -145,3 +145,26 @@ CREATE TABLE IF NOT EXISTS `cartas`.`usuario_carta` (
   CONSTRAINT `usuario_carta_usuario`
     FOREIGN KEY (`usuario_id`)
     REFERENCES `cartas`.`usuario` (`usuario_id`));
+
+INSERT INTO `cartas`.`equipo` (`nombre`) VALUES ('equipo 1');
+INSERT INTO `cartas`.`equipo` (`nombre`) VALUES ('equipo 2');
+INSERT INTO `cartas`.`equipo` (`nombre`) VALUES ('equipo 3');
+
+INSERT INTO `cartas`.`jugador` (`nombre`, `apellido`, `foto`) VALUES ('nombre 1', 'apellido 1', 'foto 1');
+INSERT INTO `cartas`.`jugador` (`nombre`, `apellido`, `foto`) VALUES ('nombre 2', 'apellido 2', 'foto 2');
+INSERT INTO `cartas`.`jugador` (`nombre`, `apellido`, `foto`) VALUES ('nombre 3', 'apellido 3', 'foto 3');
+
+INSERT INTO `cartas`.`posicion` (`nombre`) VALUES ('posicion 1');
+INSERT INTO `cartas`.`posicion` (`nombre`) VALUES ('posicion 2');
+INSERT INTO `cartas`.`posicion` (`nombre`) VALUES ('posicion 3');
+
+INSERT INTO `cartas`.`rareza` (`nombre`) VALUES ('bronce');
+INSERT INTO `cartas`.`rareza` (`nombre`) VALUES ('plata');
+INSERT INTO `cartas`.`rareza` (`nombre`) VALUES ('oro');
+
+INSERT INTO `cartas`.`rol` (`nombre`) VALUES ('administrador');
+INSERT INTO `cartas`.`rol` (`nombre`) VALUES ('coleccionista');
+
+INSERT INTO `cartas`.`serie` (`fecha_emision`) VALUES ('2001-01-01');
+INSERT INTO `cartas`.`serie` (`fecha_emision`) VALUES ('2002-01-01');
+INSERT INTO `cartas`.`serie` (`fecha_emision`) VALUES ('2003-01-01');
