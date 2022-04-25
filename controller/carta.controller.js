@@ -2,26 +2,40 @@ const { request, response } = require('express');
 const { buscarCartas, buscarCarta, crearCarta, actualizarCarta, borrarCarta } = require('../dao/carta.dao');
 
 // {
-//     "jugador":{
-//         "nombre":"pepe",
-//         "apellido":"perez"
+//     "carta_id": 5,
+//     "jugador": {
+//         "jugador_id": 1,
+//         "nombre": "nombre1",
+//         "apellido": "apellido1",
+//         "foto": "nada"
 //     },
-//     "posicion":"delantero",
-//     "serie":{
-//         "fecha_emision":"2020-02-12"
+//     "posicion": {
+//         "posicion_id": 1,
+//         "nombre": "posicion1"
 //     },
-//     "rareza":"roberto",
-//     "equipo":"boca"
+//     "serie": {
+//         "serie_id": 1,
+//         "fecha_emision": "2001-01-01"
+//     },
+//     "rareza": {
+//         "rareza_id": 1,
+//         "nombre": "bronce"
+//     },
+//     "equipo": {
+//         "equipo_id": 1,
+//         "nombre": "equipo1"
+//     }
 // }
-
 
 
 const cartasGet = async (req = request, res = response) => {
     let cartas = await buscarCartas();
     if (cartas.length > 0) {
         res.status(200).json(cartas);
+        return;
     } else {
         res.status(404).json({ message: 'No se encontraron cartas' });
+        return;
     }
 
 }
@@ -34,8 +48,10 @@ const cartaGet = async (req = request, res = response) => {
     if (carta) {
         console.log(carta);
         res.status(200).json(carta);
+        return;
     } else {
         res.status(404).json({ mensaje: 'Carta no encontrada' });
+        return;
     }
 }
 
@@ -105,8 +121,10 @@ const cartaDelete = async (req = request, res = response) => {
     let borrado = await borrarCarta(id);
     if (borrado) {
         res.status(200).json({ mensaje: 'Carta borrada' });
+        return;
     } else {
         res.status(404).json({ mensaje: 'Carta no encontrada' });
+        return;
     }
 }
 

@@ -87,7 +87,8 @@ const aniadirCartaAUser = async (usuario_id, carta_id) => {
 
 
     if (usr && carta) {
-        usr.addCarta(carta);
+        let algo = await usr.addCarta(carta);
+        console.log(algo);
         usr.Carta.push(carta);
         usr = toUsuario(usr.usuario_id, usr.nombre_usuario, usr.contrasena, usr.email, usr.Rol.nombre, usr.Carta);
     }

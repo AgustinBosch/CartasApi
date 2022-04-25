@@ -7,6 +7,7 @@ class Server {
         this.puerto = process.env.PORT || 3000;
         this.usuariosPath = '/api/usuarios';
         this.cartasPath = '/api/cartas';
+        this.infoPath = '/api/info';
 
         this.configuration();
         this.routes();
@@ -21,6 +22,7 @@ class Server {
 
         this.app.use(this.usuariosPath, require('./routes/usuario.routes'));
         this.app.use(this.cartasPath, require('./routes/carta.routes'));
+        this.app.use(this.infoPath, require('./routes/info.routes'));
     }
 
     listen() {
