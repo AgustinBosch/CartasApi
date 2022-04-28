@@ -150,9 +150,12 @@ INSERT INTO `cartas`.`equipo` (`nombre`) VALUES ('equipo 1');
 INSERT INTO `cartas`.`equipo` (`nombre`) VALUES ('equipo 2');
 INSERT INTO `cartas`.`equipo` (`nombre`) VALUES ('equipo 3');
 
-INSERT INTO `cartas`.`jugador` (`nombre`, `apellido`, `foto`) VALUES ('nombre 1', 'apellido 1', 'foto 1');
-INSERT INTO `cartas`.`jugador` (`nombre`, `apellido`, `foto`) VALUES ('nombre 2', 'apellido 2', 'foto 2');
-INSERT INTO `cartas`.`jugador` (`nombre`, `apellido`, `foto`) VALUES ('nombre 3', 'apellido 3', 'foto 3');
+INSERT INTO `cartas`.`jugador` (`nombre`, `apellido`, `foto`) VALUES ('Martin', 'Acosta', 'foto 1');
+INSERT INTO `cartas`.`jugador` (`nombre`, `apellido`, `foto`) VALUES ('Hugo', 'Rodrigez', 'foto 2');
+INSERT INTO `cartas`.`jugador` (`nombre`, `apellido`, `foto`) VALUES ('Manuel', 'Rojas', 'foto 3');
+INSERT INTO `cartas`.`jugador` (`nombre`, `apellido`, `foto`) VALUES ('David', 'Diaz', 'foto 4');
+INSERT INTO `cartas`.`jugador` (`nombre`, `apellido`, `foto`) VALUES ('Mario', 'Perez', 'foto 5');
+INSERT INTO `cartas`.`jugador` (`nombre`, `apellido`, `foto`) VALUES ('Alejando', 'Flores', 'foto 6');
 
 INSERT INTO `cartas`.`posicion` (`nombre`) VALUES ('posicion 1');
 INSERT INTO `cartas`.`posicion` (`nombre`) VALUES ('posicion 2');
