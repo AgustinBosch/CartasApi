@@ -120,7 +120,7 @@ const cartaDelete = async (req = request, res = response) => {
     let id = req.params.id;
     let borrado = await borrarCarta(id);
     if (borrado) {
-        res.status(200).json({ mensaje: 'Carta borrada' });
+        res.status(200).send(borrado);
         return;
     } else {
         res.status(404).json({ mensaje: 'Carta no encontrada' });
